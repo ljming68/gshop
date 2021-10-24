@@ -1,5 +1,5 @@
 # gshop
-niubi
+change
 ## Project setup
 ```
 npm install
