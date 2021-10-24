@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>牛逼</h2>
+    <h2>注册</h2>
   </div>
 </template>
 
