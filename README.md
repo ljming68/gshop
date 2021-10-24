@@ -1,5 +1,6 @@
 # gshop
 change
+day
 ## Project setup
 ```
 npm install
