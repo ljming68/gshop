@@ -1,18 +1,32 @@
 <template>
   <div>
-    <First></First>
+    <Header></Header>
+    <router-view></router-view>
+    <Footer v-show="!$route.meta.isFooter"></Footer>
   </div>
 </template>
 
 <script>
-import First from './components/first'
+import Header from './components/Header'
+import Footer from './components/Footer'
+
+import {getFruits} from './api'
 export default {
+  name: 'APP',
   components:{
-    First
+    Header,
+    Footer,
+    
+  },
+  mounted(){
+    // getFruits().then(result =>{
+    //   console.log('result',result)
+    // })
+    this.$store.dispatch('getCategoryList')
   }
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 
 </style>
