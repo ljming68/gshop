@@ -1,5 +1,6 @@
 <template>
   <div>
+     <TypeNav/>
     <h2>search</h2>
     <p>{{$route.params.msgid}}</p>  
     <p>{{$route.query.content}}</p>

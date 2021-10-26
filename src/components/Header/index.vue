@@ -55,7 +55,7 @@ export default {
   methods:{
     searchKeyword(){
       let {keyword} = this
-      let value = 'niubi'
+      // let value = 'niubi'
       // this.$router.push(`/search/${keyword}`)
       if(keyword.trim()){
         this.$router.push({
@@ -63,9 +63,9 @@ export default {
         params:{
           msgid:keyword
         },
-        query:{
-          content:value
-        }
+        query:this.$route.query
+        
+
         
         }).catch(()=>{})
       }else{
