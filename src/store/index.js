@@ -2,8 +2,9 @@ import Vuex from "vuex"
 import vue from "vue"
 vue.use(Vuex)
 
-import home from "./modules/home"
-import user from "./modules/user"
+// import home from "./modules/home"
+// import user from "./modules/user"
+import modules from './modules'
 
 const mutations = {
     xxx(state){ //总的state
@@ -28,8 +29,10 @@ export default new Vuex.Store({
     mutations,
     actions,
     getters,
-    modules:{
-        home,
-        user
-    }
+
+    modules
+    // modules:{
+    //     home,
+    //     user
+    // }
 })

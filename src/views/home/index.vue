@@ -18,6 +18,9 @@ import Rank from './rank'
 import Like from './like'
 import Floor from './floor'
 import Brand from './brand'
+
+import {mapState} from 'vuex'
+
 export default {
   name: 'home',
   components:{
@@ -27,6 +30,16 @@ export default {
     Like,
     Floor,
     Brand,
+  },
+
+  computed:{
+    ...mapState({
+      floorList: state => state.home.floorList
+    })
+  },
+
+  mounted(){
+    this.$store.dispatch('getFloorList')
   }
 }
 </script>

@@ -23,6 +23,7 @@ export default {
     //   console.log('result',result)
     // })
     this.$store.dispatch('getCategoryList')
+    this.$store.dispatch('getBannerList')
   }
 }
 </script>

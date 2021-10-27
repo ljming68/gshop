@@ -7,7 +7,7 @@
       >
         <h2 class="all">全部商品分类</h2>
         <transition name="slide">
-          <div class="sort" v-show="isShowFirst">
+          <div class="sort" v-show="isFirst">
             <div class="all-sort-list2" @click="toSearch3" @mouseleave="currentIndex = -1">
               <div
                 class="item"
@@ -80,6 +80,7 @@ export default {
     };
   },
 
+
   created() {
     const path = this.$route.path;
     // console.log(path);
@@ -97,7 +98,11 @@ export default {
     // ...mapState(['categoryList'])  // 不可以 this.$store.state.categoryList
     ...mapState({
       categoryList: state => state.home.categoryList
-    })
+    }),
+
+     isFirst(){
+      return this.$route.path==='/home'?true:this.isShowFirst
+    }
   },
 
   methods: {
